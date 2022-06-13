@@ -1,0 +1,10 @@
+#!/bin/bash
+
+echo "running commitlint..."
+npx -p @commitlint/config-conventional -p @commitlint/cli -c "cat $1 | commitlint"
+
+echo "running golangci-lint..."
+golangci-lint run
+
+echo "running go tests..."
+go test -v ./...
