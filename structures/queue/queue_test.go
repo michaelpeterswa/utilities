@@ -3,7 +3,7 @@ package queue_test
 import (
 	"testing"
 
-	"676f.dev/utilities/queue"
+	"676f.dev/utilities/structures/queue"
 	"github.com/stretchr/testify/assert"
 )
 
