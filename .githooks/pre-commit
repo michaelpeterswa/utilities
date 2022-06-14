@@ -1,0 +1,11 @@
+#!/bin/bash
+
+echo "running golangci-lint..."
+golangci-lint run
+
+echo "running go tests..."
+output="$(go test ./...)"
+
+if [[ $? -ne 0 ]] ; then
+    echo "$output"
+fi
