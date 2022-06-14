@@ -8,3 +8,9 @@ golangci-lint run
 
 echo "running go tests..."
 go test -v ./...
+
+output="$(go test ./...)"
+
+if [[ $? -ne 0 ]] ; then
+    echo "$output"
+fi
